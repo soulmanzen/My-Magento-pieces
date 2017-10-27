@@ -1,0 +1,19 @@
+<div class="stasblock">
+    <div class="block-title"><b>Order Form</b></div>
+    <form id="orderform" name="form" action="" method="post">
+        <input style="margin-right: 1em" type="text" name="Costumer_Name" placeholder="<?php echo $this->__('Costumer Name') ?>"><br>
+        <input style="margin-right: 1em" type="email" name="Costumer_Email" placeholder="<?php echo $this->__('Costumer Email') ?>"><br>
+        <br>
+        <p>
+            Select Product:
+            <select id="product" name="Product_Name">
+                <?php foreach ($this->getProducts() as $product) : ?>
+                <option value="<?php echo $product->getName() ?>"><?php echo $product->getName() ?></option>
+                <?php endforeach; ?>
+            </select>
+        </p>
+        <br>
+        <input style="width: 10em" type="submit" value="Order">
+    </form>
+    <div id="ordercontainer"></div>
+</div>

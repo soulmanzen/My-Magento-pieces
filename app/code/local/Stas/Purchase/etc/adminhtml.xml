@@ -1,0 +1,27 @@
+<config>
+    <menu>
+        <stasmenu>
+            <children>
+                <ordersmenu translate="title" module="staspurchase">
+                    <title>Orders</title>
+                    <action>adminhtml/orders/index</action>
+                    <sort_order>3</sort_order>
+                </ordersmenu>
+            </children>
+        </stasmenu>
+    </menu>
+
+    <acl>
+        <resources>
+            <children>
+                <stasmenu>
+                    <children>
+                        <ordersmenu translate="title" module="staspurchase">
+                            <title>Orders</title>
+                        </ordersmenu>
+                    </children>
+                </stasmenu>
+            </children>
+        </resources>
+    </acl>
+</config>

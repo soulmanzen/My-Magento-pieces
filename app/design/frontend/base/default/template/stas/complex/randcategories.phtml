@@ -1,0 +1,8 @@
+<div class="stasblock" id="randcategories">
+    <div class="block-title"><b>Featured Categories</b></div>
+    <?php
+    foreach ($this->getRandomCategories(3) as $category) {
+        echo $category . '<br>';
+    }
+    ?>
+</div>

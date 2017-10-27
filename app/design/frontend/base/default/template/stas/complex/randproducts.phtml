@@ -1,0 +1,8 @@
+<div class="stasblock" id="randproducts">
+    <div class="block-title"><b>Featured Products</b></div>
+    <?php
+    foreach ($this->getRandomProducts(6) as $product) {
+        echo $product . '<br>';
+    }
+    ?>
+</div>

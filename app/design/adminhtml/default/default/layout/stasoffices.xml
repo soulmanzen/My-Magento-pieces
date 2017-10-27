@@ -1,0 +1,7 @@
+<layout>
+    <adminhtml_offices_index>
+        <reference name="content">
+            <block type="core/template" name="stas.offices" template="stas/info/feedback.phtml" />
+        </reference>
+    </adminhtml_offices_index>
+</layout>

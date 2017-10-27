@@ -1,0 +1,21 @@
+<layout version="0.1.0">
+    <purchase_index_index>
+        <reference name="content">
+            <block type="staspurchase/form" name="stas.purchase.form" template="stas/purchase/form.phtml"></block>
+        </reference>
+        <reference name="head">
+            <action method="addJs">
+                <script>stas/purchase/jquery.validate.js</script>
+            </action>
+            <action method="addJs">
+                <script>stas/purchase/alphanumericno_.js</script>
+            </action>
+            <action method="addJs">
+                <script>stas/purchase/validation.js</script>
+            </action>
+            <action method="addJs">
+                <script>stas/purchase/ajax.js</script>
+            </action>
+        </reference>
+    </purchase_index_index>
+</layout>

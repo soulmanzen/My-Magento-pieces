@@ -1,0 +1,38 @@
+<config>
+    <menu>
+        <stasmenu translate="title" module="stasinfo">
+            <title>Stas</title>
+            <sort_order>2</sort_order>
+            <children>
+                <infomenu translate="title" module="stasinfo">
+                    <title>Info</title>
+                    <action>adminhtml/info/index</action>
+                    <sort_order>1</sort_order>
+                </infomenu>
+                <feedbackmenu translate="title" module="stasinfo">
+                    <title>Feedback</title>
+                    <action>adminhtml/feedback/index</action>
+                    <sort_order>2</sort_order>
+                </feedbackmenu>
+            </children>
+        </stasmenu>
+    </menu>
+
+    <acl>
+        <resources>
+            <children>
+                <stasmenu translate="title" module="stasinfo">
+                    <title>Stas</title>
+                    <children>
+                        <infomenu translate="title" module="stasinfo">
+                            <title>Info</title>
+                        </infomenu>
+                        <feedbackmenu translate="title" module="stasinfo">
+                            <title>Feedback</title>
+                        </feedbackmenu>
+                    </children>
+                </stasmenu>
+            </children>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,78 @@
+<config>
+    <modules>
+        <Stas_Offices>
+            <version>0.1.0</version>
+        </Stas_Offices>
+    </modules>
+
+    <frontend>
+        <routers>
+            <offices>
+                <use>standard</use>
+                <args>
+                    <module>Stas_Offices</module>
+                    <frontName>offices</frontName>
+                </args>
+            </offices>
+        </routers>
+
+        <layout>
+            <updates>
+                <stasoffices>
+                    <file>stasoffices.xml</file>
+                </stasoffices>
+            </updates>
+        </layout>
+    </frontend>
+
+    <global>
+        <blocks>
+            <stasoffices>
+                <class>Stas_Offices_Block</class>
+            </stasoffices>
+        </blocks>
+
+        <models>
+            <stasoffices>
+                <class>Stas_Offices_Model</class>
+                <resourceModel>stasoffices_resource</resourceModel>
+            </stasoffices>
+
+            <stasoffices_resource>
+                <class>Stas_Offices_Model_Resource</class>
+                <entities>
+                    <myoffices>
+                        <table>my_offices</table>
+                    </myoffices>
+                </entities>
+            </stasoffices_resource>
+        </models>
+
+        <resources>
+            <stasoffices_setup>
+                <setup>
+                    <module>Stas_Offices</module>
+                    <class>Stas_Offices_Model_Resource_Setup</class>
+                </setup>
+            </stasoffices_setup>
+        </resources>
+
+        <helpers>
+            <stasoffices>
+                <class>Stas_Offices_Helper</class>
+            </stasoffices>
+        </helpers>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Stas_Offices after="Mage_Adminhtml">Stas_Offices_Adminhtml</Stas_Offices>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

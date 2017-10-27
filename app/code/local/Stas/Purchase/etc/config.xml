@@ -1,0 +1,78 @@
+<config>
+    <modules>
+        <Stas_Purchase>
+            <version>0.1.0</version>
+        </Stas_Purchase>
+    </modules>
+
+    <global>
+        <models>
+            <staspurchase>
+                <class>Stas_Purchase_Model</class>
+                <resourceModel>staspurchase_resource</resourceModel>
+            </staspurchase>
+
+            <staspurchase_resource>
+                <class>Stas_Purchase_Model_Resource</class>
+                <entities>
+                    <orderproduct>
+                        <table>order_product</table>
+                    </orderproduct>
+                </entities>
+            </staspurchase_resource>
+        </models>
+
+        <resources>
+            <staspurchase_setup>
+                <setup>
+                    <module>Stas_Purchase</module>
+                    <class>Stas_Purchase_Model_Resource_Setup</class>
+                </setup>
+            </staspurchase_setup>
+        </resources>
+
+        <blocks>
+            <staspurchase>
+                <class>Stas_Purchase_Block</class>
+            </staspurchase>
+        </blocks>
+
+        <helpers>
+            <staspurchase>
+                <class>Stas_Purchase_Helper</class>
+            </staspurchase>
+        </helpers>
+    </global>
+
+    <frontend>
+        <routers>
+            <purchase>
+                <use>standard</use>
+                <args>
+                    <module>Stas_Purchase</module>
+                    <frontName>purchase</frontName>
+                </args>
+            </purchase>
+        </routers>
+
+        <layout>
+            <updates>
+                <staspurchase>
+                    <file>staspurchase.xml</file>
+                </staspurchase>
+            </updates>
+        </layout>
+    </frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Stas_Purchase after="Mage_Adminhtml">Stas_Purchase_Adminhtml</Stas_Purchase>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

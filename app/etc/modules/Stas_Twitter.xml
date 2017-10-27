@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Stas_Twitter>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Stas_Twitter>
+    </modules>
+</config>

@@ -1,0 +1,27 @@
+<config>
+    <modules>
+        <Stas_Twitter>
+            <version>0.1.0</version>
+        </Stas_Twitter>
+    </modules>
+
+    <global>
+        <blocks>
+            <stastwitter>
+                <class>Stas_Twitter_Block</class>
+            </stastwitter>
+        </blocks>
+    </global>
+
+    <frontend>
+        <routers>
+            <twitter>
+                <use>standard</use>
+                <args>
+                    <module>Stas_Twitter</module>
+                    <frontName>twitter</frontName>
+                </args>
+            </twitter>
+        </routers>
+    </frontend>
+</config>

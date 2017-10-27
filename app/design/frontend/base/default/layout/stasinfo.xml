@@ -1,0 +1,12 @@
+<layout version="0.1.0">
+    <info_feedback_form>
+        <reference name="content">
+            <block type="stasinfo/feedback" name="stas.info.feedback" template="stas/info/feedback.phtml"></block>
+        </reference>
+        <reference name="head">
+            <action method="addJs">
+                <script>stas/info/ajax.js</script>
+            </action>
+        </reference>
+    </info_feedback_form>
+</layout>

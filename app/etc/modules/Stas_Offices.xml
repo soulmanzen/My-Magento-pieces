@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Stas_Offices>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Stas_Offices>
+    </modules>
+</config>

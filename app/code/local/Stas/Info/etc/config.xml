@@ -1,0 +1,98 @@
+<config>
+    <modules>
+        <Stas_Info>
+            <version>0.3.0</version>
+        </Stas_Info>
+    </modules>
+
+    <frontend>
+        <routers>
+            <info>
+                <use>standard</use>
+                <args>
+                    <module>Stas_Info</module>
+                    <frontName>info</frontName>
+                </args>
+            </info>
+        </routers>
+
+        <layout>
+            <updates>
+                <stasinfo>
+                    <file>stasinfo.xml</file>
+                </stasinfo>
+            </updates>
+        </layout>
+
+        <translate>
+            <modules>
+                <Stas_Info>
+                    <files>
+                        <default>Stas_Info.csv</default>
+                    </files>
+                </Stas_Info>
+            </modules>
+        </translate>
+    </frontend>
+
+    <global>
+        <models>
+            <stasinfo>
+                <class>Stas_Info_Model</class>
+                <resourceModel>stasinfo_resource</resourceModel>
+            </stasinfo>
+
+            <stasinfo_resource>
+                <class>Stas_Info_Model_Resource</class>
+                <entities>
+                    <myfeedback>
+                        <table>my_feedback</table>
+                    </myfeedback>
+                </entities>
+            </stasinfo_resource>
+        </models>
+
+        <resources>
+            <stasinfo_setup>
+                <setup>
+                    <module>Stas_Info</module>
+                    <class>Stas_Info_Model_Resource_Setup</class>
+                </setup>
+            </stasinfo_setup>
+        </resources>
+
+        <blocks>
+            <stasinfo>
+                <class>Stas_Info_Block</class>
+            </stasinfo>
+        </blocks>
+
+        <helpers>
+            <stasinfo>
+                <class>Stas_Info_Helper</class>
+            </stasinfo>
+        </helpers>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Stas_Info after="Mage_Adminhtml">Stas_Info_Adminhtml</Stas_Info>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <stasinfo>
+                    <file>stasinfo.xml</file>
+                </stasinfo>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

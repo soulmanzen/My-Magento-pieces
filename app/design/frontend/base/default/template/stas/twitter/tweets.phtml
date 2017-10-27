@@ -1,0 +1,15 @@
+<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div id="timeline"></div>
+
+<script>
+    twttr.widgets.createTimeline(
+        {
+            sourceType: 'profile',
+            screenName: 'FoxNews'
+        },
+        document.getElementById('timeline'),
+        {
+            tweetLimit: 5
+        });
+</script>

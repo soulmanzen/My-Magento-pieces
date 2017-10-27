@@ -1,0 +1,27 @@
+<config>
+    <menu>
+        <stasmenu>
+            <children>
+                <officesmenu translate="title" module="stasoffices">
+                    <title>Offices</title>
+                    <action>adminhtml/offices/index</action>
+                    <sort_order>4</sort_order>
+                </officesmenu>
+            </children>
+        </stasmenu>
+    </menu>
+
+    <acl>
+        <resources>
+            <children>
+                <stasmenu>
+                    <children>
+                        <officesmenu translate="title" module="stasoffices">
+                            <title>Offices</title>
+                        </officesmenu>
+                    </children>
+                </stasmenu>
+            </children>
+        </resources>
+    </acl>
+</config>

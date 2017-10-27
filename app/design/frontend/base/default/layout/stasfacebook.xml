@@ -1,0 +1,10 @@
+<layout version="0.1.0">
+    <facebook_index_index>
+        <reference name="content">
+            <block type="stasfacebook/share" name="stas.facebook.share" template="stas/facebook/share.phtml"></block>
+        </reference>
+        <reference name="head">
+            <block type="stasfacebook/facebookmeta" name="stas.facebook.facebookmeta" template="stas/facebook/facebookmeta.phtml"></block>
+        </reference>
+    </facebook_index_index>
+</layout>

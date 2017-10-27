@@ -1,0 +1,7 @@
+<layout version="0.1.0">
+    <offices_index_index>
+        <reference name="content">
+            <block type="stasoffices/officesmap" name="stas.offices.officesmap" template="stas/offices/officesmap.phtml"></block>
+        </reference>
+    </offices_index_index>
+</layout>

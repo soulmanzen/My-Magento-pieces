@@ -1,0 +1,35 @@
+<config>
+    <modules>
+        <Stas_Facebook>
+            <version>0.1.0</version>
+        </Stas_Facebook>
+    </modules>
+
+    <frontend>
+        <routers>
+            <facebook>
+                <use>standard</use>
+                <args>
+                    <module>Stas_Facebook</module>
+                    <frontName>facebook</frontName>
+                </args>
+            </facebook>
+        </routers>
+
+        <layout>
+            <updates>
+                <stasfacebook>
+                    <file>stasfacebook.xml</file>
+                </stasfacebook>
+            </updates>
+        </layout>
+    </frontend>
+
+    <global>
+        <blocks>
+            <stasfacebook>
+                <class>Stas_Facebook_Block</class>
+            </stasfacebook>
+        </blocks>
+    </global>
+</config>

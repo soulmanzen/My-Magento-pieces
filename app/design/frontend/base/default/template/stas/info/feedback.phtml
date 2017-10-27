@@ -1,0 +1,17 @@
+<div class="stasblock">
+    <div class="block-title"><b>Feedback</b></div>
+    <form id="feedbackform" action="" method="post">
+        <input type="text" name="name" placeholder="<?php echo $this->__('Name'); ?>"><br>
+        <input type="email" name="email" placeholder="<?php echo $this->__('Email'); ?>"><br>
+        <input type="text" name="phone" placeholder="<?php echo $this->__('Phone'); ?>"><br>
+        <textarea name="message" placeholder=" <?php echo $this->__('Message'); ?>"></textarea><br>
+        <select name="type">
+            <option value="general">general</option>
+            <option <?php echo $this->getType() == 'account' ? 'selected' : ''; ?> value="account">account</option>
+            <option <?php echo $this->getType() == 'order' ? 'selected' : ''; ?> value="order">order</option>
+        </select>
+        <br>
+        <input type="submit">
+    </form>
+    <div id="feedbackcontainer"></div>
+</div>

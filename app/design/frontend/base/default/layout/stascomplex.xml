@@ -1,0 +1,30 @@
+<layout version="0.1.0">
+    <complex_index_index>
+        <reference name="content">
+            <block type="stascomplex/randcategories" name="stas.complex.randcategories" template="stas/complex/randcategories.phtml"></block>
+            <block type="stascomplex/randproducts" name="stas.complex.randproducts" template="stas/complex/randproducts.phtml"></block>
+            <block type="staspurchase/form" name="stas.purchase.form" template="stas/purchase/form.phtml"></block>
+            <block type="stasinfo/feedback" name="stas.info.feedback" template="stas/info/feedback.phtml"></block>
+        </reference>
+        <reference name="head">
+            <action method="addCss">
+                <script>css/stascomplex.css</script>
+            </action>
+            <action method="addJs">
+                <script>stas/purchase/jquery.validate.js</script>
+            </action>
+            <action method="addJs">
+                <script>stas/purchase/alphanumericno_.js</script>
+            </action>
+            <action method="addJs">
+                <script>stas/purchase/validation.js</script>
+            </action>
+            <action method="addJs">
+                <script>stas/purchase/ajax.js</script>
+            </action>
+            <action method="addJs">
+                <script>stas/info/ajax.js</script>
+            </action>
+        </reference>
+    </complex_index_index>
+</layout>

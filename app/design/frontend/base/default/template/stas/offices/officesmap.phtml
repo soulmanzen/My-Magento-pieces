@@ -1,5 +1,5 @@
 <h1>Google Map</h1>
-<div style="height: 400px" id="map"></div>
+<div style="height: <?php echo $this->getHeightMap(); ?>px; width: <?php echo $this->getWidthMap(); ?>px" id="map"></div>
 <script>
     var locations = <?php echo $this->getOffices();?>;
     function initMap() {

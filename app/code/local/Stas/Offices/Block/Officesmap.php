@@ -21,4 +21,14 @@ class Stas_Offices_Block_Officesmap extends Mage_Core_Block_Template
     {
         return Mage::helper('stasoffices')->getApiKey();
     }
+
+    public function getWidthMap()
+    {
+        return (int) Mage::getStoreConfig('stasofficessection/stasofficessettings/width');
+    }
+
+    public function getHeightMap()
+    {
+        return (int) Mage::getStoreConfig('stasofficessection/stasofficessettings/height');
+    }
 }

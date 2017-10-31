@@ -13,15 +13,29 @@
 
     <acl>
         <resources>
-            <children>
-                <stasmenu>
-                    <children>
-                        <officesmenu translate="title" module="stasoffices">
-                            <title>Offices</title>
-                        </officesmenu>
-                    </children>
-                </stasmenu>
-            </children>
+            <admin>
+                <children>
+                    <stasmenu>
+                        <children>
+                            <officesmenu translate="title" module="stasoffices">
+                                <title>Offices</title>
+                            </officesmenu>
+                        </children>
+                    </stasmenu>
+
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <stasofficessection translate="title" module="stasoffices">
+                                        <title>Stas Offices Settings</title>
+                                    </stasofficessection>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
         </resources>
     </acl>
 </config>

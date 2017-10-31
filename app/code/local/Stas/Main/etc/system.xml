@@ -1,0 +1,8 @@
+<config>
+    <tabs>
+        <stastab translate="label">
+            <label>Stas Modules</label>
+            <sort_order>20</sort_order>
+        </stastab>
+    </tabs>
+</config>

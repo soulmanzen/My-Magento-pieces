@@ -1,0 +1,43 @@
+<config>
+    <sections>
+        <stasfacebooksection translate="label">
+            <label>Stas Facebook Settings</label>
+            <sort_order>40</sort_order>
+            <tab>stastab</tab>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+
+            <groups>
+                <stasfacebooksettings translate="label">
+                    <label>Page Settings</label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+                        <text translate="label">
+                            <label>Text</label>
+                            <sort_order>1</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text>
+                        <image translate="label">
+                            <label>Image</label>
+                            <sort_order>2</sort_order>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>skin/frontend/base/default/images/stas/facebook</upload_dir>
+                            <comment><![CDATA[Image will be saved in <b><span style="color: green;">skin/frontend/base/default/images/stas/facebook</span></b> folder]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image>
+                    </fields>
+                </stasfacebooksettings>
+            </groups>
+        </stasfacebooksection>
+    </sections>
+</config>

@@ -3,6 +3,9 @@
         <Stas_Twitter>
             <active>true</active>
             <codePool>local</codePool>
+            <depends>
+                <Stas_Main/>
+            </depends>
         </Stas_Twitter>
     </modules>
 </config>

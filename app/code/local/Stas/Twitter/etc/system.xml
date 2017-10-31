@@ -1,0 +1,32 @@
+<config>
+    <sections>
+        <stastwittersection translate="label">
+            <label>Stas Twitter Settins</label>
+            <sort_order>30</sort_order>
+            <tab>stastab</tab>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+
+            <groups>
+                <stastwittersettings translate="label">
+                    <label>Display Settings</label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+                        <quantity translate="label">
+                            <label>Quantity of tweets</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-not-negative-number</validate>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </quantity>
+                    </fields>
+                </stastwittersettings>
+            </groups>
+        </stastwittersection>
+    </sections>
+</config>

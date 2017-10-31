@@ -3,6 +3,9 @@
         <Stas_Facebook>
             <active>true</active>
             <codePool>local</codePool>
+            <depends>
+                <Stas_Main/>
+            </depends>
         </Stas_Facebook>
     </modules>
 </config>

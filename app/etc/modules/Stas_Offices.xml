@@ -3,6 +3,9 @@
         <Stas_Offices>
             <active>true</active>
             <codePool>local</codePool>
+            <depends>
+                <Stas_Main/>
+            </depends>
         </Stas_Offices>
     </modules>
 </config>

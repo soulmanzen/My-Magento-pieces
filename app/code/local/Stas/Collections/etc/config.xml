@@ -1,0 +1,35 @@
+<config>
+    <modules>
+        <Stas_Collections>
+            <version>0.1.0</version>
+        </Stas_Collections>
+    </modules>
+
+    <global>
+        <blocks>
+            <stascollections>
+                <class>Stas_Collections_Block</class>
+            </stascollections>
+        </blocks>
+    </global>
+
+    <frontend>
+        <routers>
+            <collections>
+                <use>standard</use>
+                <args>
+                    <module>Stas_Collections</module>
+                    <frontName>collections</frontName>
+                </args>
+            </collections>
+        </routers>
+
+        <layout>
+            <updates>
+                <stascollections>
+                    <file>stascollections.xml</file>
+                </stascollections>
+            </updates>
+        </layout>
+    </frontend>
+</config>

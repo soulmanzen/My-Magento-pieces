@@ -1,0 +1,50 @@
+<?php
+$_productsByWordInName = $this->getProductsByWordInName();
+$_productsInRangePrice = $this->getProductsInRangePrice();
+$_productsWithSpecialPrice = $this->getProductsWithSpecialPrice();
+$_categoriesByCondition = $this->getCategoriesByCondition();
+?>
+
+<?php if ($_productsByWordInName->count()) : ?>
+<div>
+<h4 class="block-title">Products contain 'product' in name</h4>
+<ul>
+    <?php foreach ($_productsByWordInName as $product) {
+        echo '<li>' . $product->getName() . '</li>';
+    } ?>
+</ul>
+</div>
+<?php endif; ?>
+
+<?php if ($_productsInRangePrice->count()) : ?>
+<div>
+<h4 class="block-title">Products in price range $50 - $150</h4>
+<ul>
+    <?php foreach ($_productsInRangePrice as $product) {
+        echo '<li>' . $product->getName() . ' - $' . $product->getPrice() . '</li>';
+    } ?>
+</ul>
+</div>
+<?php endif; ?>
+
+<?php if ($_productsWithSpecialPrice->count()) : ?>
+<div>
+    <h4 class="block-title">Products with special price</h4>
+    <ul>
+        <?php foreach ($_productsWithSpecialPrice as $product) {
+            echo '<li>' . $product->getName() . ' - $' . $product->getSpecialPrice() . '</li>';
+        } ?>
+    </ul>
+</div>
+<?php endif; ?>
+
+<?php if ($_categoriesByCondition->count()) : ?>
+<div>
+    <h4 class="block-title">Categories by condition</h4>
+    <ul>
+        <?php foreach ($_categoriesByCondition as $product) {
+            echo '<li>' . 'Name: ' . $product->getName() . '| MetaTitle: ' . $product->getMetaTitle() . '</li>';
+        } ?>
+    </ul>
+</div>
+<?php endif; ?>

@@ -1,0 +1,7 @@
+<layout version="0.1.0">
+    <collections_index_index>
+        <reference name="content">
+            <block type="stascollections/display" name="stas.collections.display" template="stas/collections/display.phtml"></block>
+        </reference>
+    </collections_index_index>
+</layout>

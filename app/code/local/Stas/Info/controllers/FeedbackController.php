@@ -55,6 +55,34 @@ class Stas_Info_FeedbackController extends Mage_Core_Controller_Front_Action
         $myfeedback->setType($array['type']);
         $myfeedback->save();
     }
+
+    public function showAction()
+    {
+        $pageNumber = (int) $this->getRequest()->getParam('pagenum');
+
+        if (!$pageNumber) {
+            $pageNumber = 1;
+        }
+
+        Mage::register('stas_info_showfeedbacks_pagenumber', $pageNumber);
+
+        $sortBy = $this->getRequest()->getPost('sortby');
+        if ($sortBy) {
+            Mage::getSingleton('core/session')->setSortBy($sortBy);
+        }
+
+        $direction = $this->getRequest()->getPost('direction');
+        if ($direction) {
+            Mage::getSingleton('core/session')->setDirection($direction);
+        }
+
+        $this->loadLayout();
+        $block = $this->getLayout()->createBlock('stasinfo/showfeedbacks')
+            ->setTemplate('stas/info/showfeedbacks.phtml');
+        $this->getLayout()->getBlock('head')->addCss('css/stas/feedbacktable.css');
+        $this->getLayout()->getBlock('content')->append($block);
+        $this->renderLayout();
+    }
 }
 
 

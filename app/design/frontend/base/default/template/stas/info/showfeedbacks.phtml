@@ -1,0 +1,69 @@
+<?php $_feedbacks = $this->getByPage(); ?>
+<?php $links = $this->getPagination(); ?>
+<?php $pageNumber = $this->getPageNumber(); ?>
+<?php $sortBy = $this->getSortBy(); ?>
+<?php $direction = $this->getDirection(); ?>
+
+<div style="display: inline-block"><h2><?php echo $this->__('Feedbacktable'); ?></h2></div>
+<div style="display: inline-block; float: right;">
+    <form  method="post">
+        <select name="sortby">
+            <option value="feedback_id" <?php echo $sortBy == 'feedback_id' ? 'selected' : ''; ?>>ID</option>
+            <option value="name" <?php echo $sortBy == 'name' ? 'selected' : ''; ?>>Name</option>
+            <option value="email" <?php echo $sortBy == 'email' ? 'selected' : ''; ?>>Email</option>
+            <option value="phone" <?php echo $sortBy == 'phone' ? 'selected' : ''; ?>>Phone</option>
+            <option value="message" <?php echo $sortBy == 'message' ? 'selected' : ''; ?>>Message</option>
+            <option value="status" <?php echo $sortBy == 'status' ? 'selected' : ''; ?>>Status</option>
+            <option value="timestamp" <?php echo $sortBy == 'timestamp' ? 'selected' : ''; ?>>Created</option>
+            <option value="type" <?php echo $sortBy == 'type' ? 'selected' : ''; ?>>Type</option>
+        </select>
+
+        <select name="direction">
+            <option value="ASC" <?php echo $direction == 'ASC' ? 'selected' : ''; ?>>ASC</option>
+            <option value="DESC" <?php echo $direction == 'DESC' ? 'selected' : ''; ?>>DESC</option>
+        </select>
+
+        <input class="button" type="submit" value="Apply">
+    </form>
+</div>
+
+<table class="feedbacktable">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Message</th>
+        <th>Status</th>
+        <th>Created</th>
+        <th>Type</th>
+    </tr>
+<?php foreach ($_feedbacks as $feedback) : ?>
+    <tr>
+        <td><?php echo $feedback->getId(); ?></td>
+        <td><?php echo $feedback->getName(); ?></td>
+        <td><?php echo $feedback->getEmail(); ?></td>
+        <td><?php echo $feedback->getPhone(); ?></td>
+        <td><?php echo $feedback->getMessage(); ?></td>
+        <td><?php echo $feedback->getStatus(); ?></td>
+        <td><?php echo $this->formatDate($feedback->getTimestamp()); ?></td>
+        <td><?php echo $feedback->getType(); ?></td>
+    </tr>
+<?php endforeach; ?>
+</table>
+
+<?php if (! empty($links)) : ?>
+    <div>
+        <?php foreach ($links as $link) : ?>
+            <?php if ($pageNumber == $link['pagenum']) : ?>
+                <span>
+                    <?php echo $link['pagenum']; ?>
+                </span>
+            <?php else : ?>
+                <a href="<?php echo $link['href']; ?>" style="margin: 0 4px;">
+                    <?php echo $link['pagenum']; ?>
+                </a>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

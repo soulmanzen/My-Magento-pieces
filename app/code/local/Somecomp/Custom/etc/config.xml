@@ -1,0 +1,35 @@
+<config>
+    <modules>
+        <Somecomp_Custom>
+            <version>0.0.1</version>
+        </Somecomp_Custom>
+    </modules>
+
+    <global>
+        <resources>
+            <somecompcustom_setup>
+                <setup>
+                    <module>Somecomp_Custom</module>
+                </setup>
+            </somecompcustom_setup>
+        </resources>
+
+        <models>
+            <somecompcustom>
+                <class>Somecomp_Custom_Model</class>
+            </somecompcustom>
+        </models>
+
+        <events>
+            <catalog_product_collection_load_before>
+                <observers>
+                    <filter_products>
+                        <type>singleton</type>
+                        <class>Somecomp_Custom_Model_Observer</class>
+                        <method>filterProductsByTestattribute</method>
+                    </filter_products>
+                </observers>
+            </catalog_product_collection_load_before>
+        </events>
+    </global>
+</config>

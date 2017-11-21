@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Somecomp_Custom>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Somecomp_Custom>
+    </modules>
+</config>

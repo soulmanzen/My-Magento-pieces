@@ -1,0 +1,21 @@
+<?php
+$_isEnable = $this->isEnable();
+$_colorscheme = $this->getColorscheme();
+$_width = $this->getWidth();
+$_numberOfPosts = $this->getNumberOfPosts();
+$_orderBy = $this->getOrderBy();
+$_currentUrl = $this->getCurrentUrl();
+?>
+
+<?php if ($_isEnable) : ?>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=282594482233293';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-comments" data-colorscheme="<?php echo $_colorscheme ?>" data-href="<?php echo $_currentUrl ?>" data-width="<?php echo $_width ?>" data-numposts="<?php echo $_numberOfPosts ?>" data-order-by="<?php echo $_orderBy ?>"></div>
+<?php endif; ?>

@@ -1,0 +1,31 @@
+<config>
+    <modules>
+        <Stas_Facebookcomment>
+            <version>0.1.0</version>
+        </Stas_Facebookcomment>
+    </modules>
+
+    <frontend>
+        <layout>
+            <updates>
+                <stasfacebookcomment>
+                    <file>stasfacebookcomment.xml</file>
+                </stasfacebookcomment>
+            </updates>
+        </layout>
+    </frontend>
+
+    <global>
+        <blocks>
+            <stasfacebookcomment>
+                <class>Stas_Facebookcomment_Block</class>
+            </stasfacebookcomment>
+        </blocks>
+
+        <models>
+            <stasfacebookcomment>
+                <class>Stas_Facebookcomment_Model</class>
+            </stasfacebookcomment>
+        </models>
+    </global>
+</config>
